@@ -18,8 +18,8 @@
       b.setAttribute("aria-pressed", b.getAttribute("data-set") === lang ? "true" : "false");
     });
     document.title = lang === "en"
-      ? "Your Name · ERP Project Manager & Senior D365 SCM Consultant"
-      : "Dein Name · ERP Project Manager & Senior D365 SCM Consultant";
+      ? "Eries Shala · ERP Project Manager & Senior D365 SCM Consultant"
+      : "Eries Shala · ERP Project Manager & Senior D365 SCM Consultant";
   }
 
   buttons.forEach(function (b) {
