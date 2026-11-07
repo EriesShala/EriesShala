@@ -63,8 +63,14 @@ a:hover { color: var(--accent); }
 }
 .facts li {
   background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
-  border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column;
+  border-radius: var(--radius); margin: 0;
 }
+.facts a {
+  display: flex; flex-direction: column; height: 100%;
+  padding: 12px 14px; color: #fff; text-decoration: none;
+  border-radius: var(--radius);
+}
+.facts li:hover, .facts li:focus-within { background: rgba(255,255,255,.18); border-color: var(--accent); }
 .facts strong { font-size: 1.4rem; }
 .facts span { color: #cfe0ee; font-size: .9rem; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 0; }
