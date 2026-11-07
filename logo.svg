@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 52" width="30" height="52" role="img" aria-label="shala-labs">
+  <g fill="#ffffff">
+    <rect x="11" y="0"  width="8" height="8" rx="1.5"/>
+    <rect x="22" y="0"  width="8" height="8" rx="1.5"/>
+    <rect x="0"  y="11" width="8" height="8" rx="1.5"/>
+    <rect x="22" y="33" width="8" height="8" rx="1.5"/>
+    <rect x="0"  y="44" width="8" height="8" rx="1.5"/>
+    <rect x="11" y="44" width="8" height="8" rx="1.5"/>
+  </g>
+  <rect x="11" y="22" width="8" height="8" rx="1.5" fill="#3FA7D6"/>
+</svg>
