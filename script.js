@@ -50,3 +50,10 @@
     if (el) obs.observe(el);
   });
 })();
+(function () {
+  var tabs = document.querySelector(".tabs");
+  if (!tabs) return;
+  function check() { tabs.classList.toggle("is-stuck", tabs.getBoundingClientRect().top <= 0); }
+  window.addEventListener("scroll", check, { passive: true });
+  check();
+})();
