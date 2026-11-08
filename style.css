@@ -258,8 +258,8 @@ footer p { margin: 0 0 8px; }
 .fan-seg.is-active .shape { fill: rgba(255,255,255,.26); }
 .fan-seg .edge { fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; opacity: 0; transition: opacity .3s; }
 .fan-seg.is-active .edge { opacity: .9; }
-.fan-seg .ico { fill: none; stroke: #cfcaff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
-.fan-seg.is-active .ico { stroke: #fff; }
+.fan-seg .ico { filter: drop-shadow(0 3px 3px rgba(15,4,50,.55)); opacity: .8; transition: opacity .3s; }
+.fan-seg.is-active .ico, .fan-seg:hover .ico { opacity: 1; }
 .fan-seg text {
   font: 500 8.5px ui-monospace, Menlo, Consolas, monospace; letter-spacing: .1em;
   fill: #cfcaff; pointer-events: none;
