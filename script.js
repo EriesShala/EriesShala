@@ -50,3 +50,34 @@ var links = document.querySelectorAll(".side a");
     if (el) obs.observe(el);
   });
 })();
+// Fächer-Grafik: Klick/Hover/Tastatur wählt, sonst wechselt sie automatisch
+(function () {
+  var fan = document.getElementById("fan");
+  if (!fan) return;
+  var segs = fan.querySelectorAll(".fan-seg");
+  var infos = fan.querySelectorAll(".fan-info");
+  var cur = 0, timer = null;
+
+  function show(i) {
+    cur = i;
+    segs.forEach(function (s, k) { s.classList.toggle("is-active", k === i); });
+    infos.forEach(function (n, k) { n.classList.toggle("is-active", k === i); });
+  }
+  function start() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    stop();
+    timer = setInterval(function () { show((cur + 1) % segs.length); }, 4000);
+  }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+  segs.forEach(function (s, k) {
+    s.addEventListener("mouseenter", function () { show(k); stop(); });
+    s.addEventListener("focus", function () { show(k); stop(); });
+    s.addEventListener("click", function () { show(k); });
+    s.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(k); }
+    });
+  });
+  fan.addEventListener("mouseleave", start);
+  start();
+})();
