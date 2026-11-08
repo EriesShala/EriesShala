@@ -35,54 +35,44 @@
   <main id="inhalt">
     <section class="hero" id="start">
       <div class="wrap">
-        <div class="fan" id="fan">
+<div class="fan" id="fan">
   <svg viewBox="0 0 420 225" role="group" aria-label="Schwerpunkte / Focus areas">
+    <defs>
+      <linearGradient id="fgTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4c6ff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+      <linearGradient id="fgLeft" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8d63ff"/><stop offset="1" stop-color="#4318b0"/></linearGradient>
+      <linearGradient id="fgRight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a22b8"/><stop offset="1" stop-color="#1c0a55"/></linearGradient>
+      <linearGradient id="fgWarm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a62"/><stop offset="1" stop-color="#e0509a"/></linearGradient>
+    </defs>
     <g class="fan-seg is-active" data-i="0" role="button" tabindex="0" aria-label="Inventory">
       <path class="shape" d="M5.2 207.1A205 205 0 0 1 59.6 75.7L122.0 133.5A120 120 0 0 0 90.1 210.4Z"/>
       <path class="edge" d="M96.1 210.6A114 114 0 0 1 126.4 137.5"/>
-      <g class="ico" transform="translate(49.9 122.8)"><path d="M3 7l7-4 7 4v8l-7 4-7-4zM3 7l7 4 7-4M10 11v8"/></g>
+      <g class="ico" transform="translate(44.9 110.8) scale(1.25)"><path d="M12 2L21 7L12 12L3 7Z" fill="url(#fgTop)"/><path d="M3 7L12 12V22L3 17Z" fill="url(#fgLeft)"/><path d="M21 7L12 12V22L21 17Z" fill="url(#fgRight)"/><path d="M12 2L21 7V17L12 22L3 17V7Z" fill="none" stroke="url(#fgWarm)" stroke-width="0.9" stroke-linejoin="round"/></g>
       <text x="59.9" y="162.8" text-anchor="middle" lang="de">BESTAND</text>
       <text x="59.9" y="162.8" text-anchor="middle" lang="en">INVENTORY</text>
     </g>
     <g class="fan-seg" data-i="1" role="button" tabindex="0" aria-label="Warehouse">
       <path class="shape" d="M70.7 64.6A205 205 0 0 1 202.1 10.2L205.4 95.1A120 120 0 0 0 128.5 127.0Z"/>
       <path class="edge" d="M132.5 131.4A114 114 0 0 1 205.6 101.1"/>
-      <g class="ico" transform="translate(137.8 34.9)"><path d="M2 18V8l8-5 8 5v10M6 18v-6h8v6"/></g>
+      <g class="ico" transform="translate(132.8 22.9) scale(1.25)"><path d="M2 10L12 3L22 10V21H2Z" fill="url(#fgLeft)" stroke="url(#fgWarm)" stroke-width="0.9" stroke-linejoin="round"/><path d="M7 21V13H17V21Z" fill="url(#fgRight)"/><path d="M7 16H17M7 18.5H17" stroke="#c4b5fd" stroke-width="0.8" opacity=".7"/></g>
       <text x="147.8" y="74.9" text-anchor="middle" lang="de">LAGER</text>
       <text x="147.8" y="74.9" text-anchor="middle" lang="en">WAREHOUSE</text>
     </g>
     <g class="fan-seg" data-i="2" role="button" tabindex="0" aria-label="Transport">
       <path class="shape" d="M217.9 10.2A205 205 0 0 1 349.3 64.6L291.5 127.0A120 120 0 0 0 214.6 95.1Z"/>
       <path class="edge" d="M214.4 101.1A114 114 0 0 1 287.5 131.4"/>
-      <g class="ico" transform="translate(262.2 34.9)"><path d="M1 5h11v9H1zM12 8h4l3 3v3h-7"/><circle cx="5" cy="16" r="1.8"/><circle cx="15" cy="16" r="1.8"/></g>
+      <g class="ico" transform="translate(257.2 22.9) scale(1.25)"><rect x="1" y="5" width="13" height="11" rx="1.5" fill="url(#fgLeft)" stroke="url(#fgWarm)" stroke-width="0.9"/><path d="M14 9H19L23 13V16H14Z" fill="url(#fgTop)" stroke="url(#fgWarm)" stroke-width="0.9" stroke-linejoin="round"/><circle cx="6" cy="18" r="2.6" fill="url(#fgRight)" stroke="url(#fgWarm)" stroke-width="0.9"/><circle cx="18" cy="18" r="2.6" fill="url(#fgRight)" stroke="url(#fgWarm)" stroke-width="0.9"/></g>
       <text x="272.2" y="74.9" text-anchor="middle" lang="de">TRANSPORT</text>
       <text x="272.2" y="74.9" text-anchor="middle" lang="en">TRANSPORT</text>
     </g>
     <g class="fan-seg" data-i="3" role="button" tabindex="0" aria-label="Landed Cost">
       <path class="shape" d="M360.4 75.7A205 205 0 0 1 414.8 207.1L329.9 210.4A120 120 0 0 0 298.0 133.5Z"/>
       <path class="edge" d="M293.6 137.5A114 114 0 0 1 323.9 210.6"/>
-      <g class="ico" transform="translate(350.1 122.8)"><circle cx="10" cy="10" r="8"/><path d="M10 5v10M13 7.5c-1-1-5-1.5-5 .8 0 2.7 5 1.2 5 3.9 0 2.2-4 2-5 .8"/></g>
+      <g class="ico" transform="translate(345.1 110.8) scale(1.25)"><circle cx="12" cy="12" r="10" fill="url(#fgTop)" stroke="url(#fgWarm)" stroke-width="0.9"/><circle cx="12" cy="12" r="7" fill="none" stroke="#5b2fd6" stroke-width="0.9" opacity=".6"/><path d="M12 6.5V17.5M15 8.6C13.8 7.3 9 7.1 9 9.8 9 12.8 15 11.2 15 14.2 15 16.8 10.2 16.6 9 15.1" fill="none" stroke="#2a1170" stroke-width="1.6" stroke-linecap="round"/></g>
       <text x="360.1" y="162.8" text-anchor="middle" lang="de">LANDED COST</text>
       <text x="360.1" y="162.8" text-anchor="middle" lang="en">LANDED COST</text>
     </g>
   </svg>
-  <div class="fan-info is-active" data-i="0">
-    <h3><span lang="de">Bestandsmanagement</span><span lang="en">Inventory management</span></h3>
-    <p><span lang="de">Genaue Bestände, weniger Differenzen, bessere Verfügbarkeit.</span><span lang="en">Accurate stock, fewer variances, better availability.</span></p>
-  </div>
-  <div class="fan-info" data-i="1">
-    <h3><span lang="de">Lager</span><span lang="en">Warehouse</span></h3>
-    <p><span lang="de">Effiziente Prozesse vom Wareneingang bis zum Versand.</span><span lang="en">Efficient processes from receiving to shipping.</span></p>
-  </div>
-  <div class="fan-info" data-i="2">
-    <h3><span lang="de">Transport</span><span lang="en">Transportation</span></h3>
-    <p><span lang="de">Planung und Abwicklung von Transporten im Griff.</span><span lang="en">Planning and executing transport under control.</span></p>
-  </div>
-  <div class="fan-info" data-i="3">
-    <h3><span lang="de">Landed Cost</span><span lang="en">Landed Cost</span></h3>
-    <p><span lang="de">Transparente Einstandskosten über die ganze Lieferkette.</span><span lang="en">Transparent landed costs across the supply chain.</span></p>
-  </div>
-</div>
+  <!-- ab hier die vier <div class="fan-info"> unverändert lassen -->
         <h1>Eries Shala</h1>
         <p class="role">
           <span lang="de">ERP Project Manager &amp; Senior D365 SCM Consultant</span>
