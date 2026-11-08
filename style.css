@@ -43,8 +43,11 @@ a:hover { color: var(--accent); }
 }
 .brand img { height: 32px; width: auto; }
 .switch {
-  display: flex; gap: 2px; padding: 3px; margin-left: auto;
-  border: 1px solid rgba(255,255,255,.3); border-radius: 999px;
+  display: flex; gap: 2px; padding: 3px;
+  border: 1.5px solid transparent; border-radius: 999px;
+  background:
+    linear-gradient(#0b0b0d, #0b0b0d) padding-box,
+    linear-gradient(90deg, #d946ef, #6c47f0, #38bdf8) border-box;
 }
 .switch button {
   background: transparent; color: #cfe0ee; border: 0; border-radius: 999px;
