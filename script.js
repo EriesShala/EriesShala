@@ -33,3 +33,20 @@
   // Standard Deutsch; gespeicherte Wahl hat Vorrang
   setLang(stored() || "de");
 })();
+(function () {
+  var links = document.querySelectorAll(".tabs a");
+  if (!links.length || !("IntersectionObserver" in window)) return;
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a; });
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (l) { l.removeAttribute("aria-current"); });
+      map[e.target.id].setAttribute("aria-current", "true");
+    });
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  Object.keys(map).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) obs.observe(el);
+  });
+})();
