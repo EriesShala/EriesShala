@@ -34,7 +34,7 @@
   setLang(stored() || "de");
 })();
 (function () {
-  var links = document.querySelectorAll(".tabs a");
+var links = document.querySelectorAll(".side a");
   if (!links.length || !("IntersectionObserver" in window)) return;
   var map = {};
   links.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a; });
@@ -49,11 +49,4 @@
     var el = document.getElementById(id);
     if (el) obs.observe(el);
   });
-})();
-(function () {
-  var tabs = document.querySelector(".tabs");
-  if (!tabs) return;
-  function check() { tabs.classList.toggle("is-stuck", tabs.getBoundingClientRect().top <= 0); }
-  window.addEventListener("scroll", check, { passive: true });
-  check();
 })();
