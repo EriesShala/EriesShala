@@ -215,3 +215,35 @@ footer p { margin: 0 0 8px; }
   .switch { margin-left: auto; }
   section { padding: 40px 0; }
 }
+/* Lauftext-Band */
+.ticker {
+  margin-top: 56px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.ticker-track {
+  display: flex; width: max-content;
+  animation: ticker-scroll 28s linear infinite;
+}
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker ul {
+  display: flex; flex: none; align-items: center;
+  list-style: none; margin: 0; padding: 0;
+}
+.ticker li {
+  margin: 0; padding: 0 28px 0 0; display: flex; align-items: center; gap: 28px;
+  font-size: clamp(1.25rem, 2.6vw, 1.9rem); font-weight: 500; letter-spacing: -.01em;
+  color: rgba(233,230,255,.62); white-space: nowrap;
+}
+.ticker li::after {
+  content: ""; width: 8px; height: 8px; border-radius: 2px; flex: none;
+  background: linear-gradient(135deg, #d946ef, #6c47f0);
+}
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
